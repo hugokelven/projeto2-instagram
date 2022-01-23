@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Instagram</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/insta-title-icon.png" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="viewport-935.css" />
+    <link rel="stylesheet" href="viewport-614.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-      <div class="barra-superior">
+      <div class="barra-superior"> <!-- barra branca que contém o menu superior -->
         <div class="menu-superior">
             <div class="menu-icones-esq">
             <a href="#"><img src="icons/logo-instagram.svg" class="icons"></a>
@@ -30,10 +33,10 @@
         </div>
       <div class="separador-horizontal"></div>
       </div>
-      <div class="conteudo-da-pag">
+      <div class="conteudo-da-pag"> <!-- agrupa os stories, o feed e a barra lateral -->
         <div class="stories-e-feed">
           <div class="stories">
-            <div class="story">
+            <div class="story"> <!-- contém uma imagem com a logo de uma página e o nome abaixo -->
                 <a href="#"><img src="imgs/9gag.jpg"></a>
                 <a href="#"><p>9gag</p></a>
             </div>
@@ -63,23 +66,24 @@
             </div>
             <div class="story">
               <a href="#"><img src="imgs/memeriago.jpg"></a>
-              <a href="#"><p>filomoderna</p></a>
+              <a href="#"><p>memeriago</p></a>
             </div>
             <div class="story">
               <a href="#"><img src="imgs/memeriago.jpg"></a>
-              <a href="#"><p>filomoderna</p></a>
+              <a href="#"><p>memeriago</p></a>
             </div>
             <div class="story">
               <a href="#"><img src="imgs/memeriago.jpg"></a>
-              <a href="#"><p>filomoderna</p></a>
+              <a href="#"><p>memeriago</p></a>
             </div>
-            <a href="#"><ion-icon name="chevron-forward-circle" class="seta-stories"></ion-icon></a>
+            <a href="#"><ion-icon name="chevron-forward-circle" class="seta-stories"></ion-icon></a> <!-- seta dos stories -->
           </div>
-          <div class="feed">
-            <div class="post">
+          <div class="feed"> <!-- compreende a área destinada aos posts -->
+            <div class="post"> <!-- é subdivido em barra superior, img ou vídeo e barra inferior, respectivamente -->
                   <div class="post-barra-sup">
                     <a href="#"><img src="imgs/meowed.jpg" class="post-logo-pag"></a>
                     <a href="#"><p>Meowed</p></a>
+                    <a href="#"><ion-icon name="ellipsis-horizontal" class="icons"></ion-icon></a>
                   </div>
                   <img src="imgs/meowed-post.jpg">
                   <div class="post-barra-inf">
@@ -95,10 +99,11 @@
                     </div>
                   </div>
               </div>
-              <div class="post ultimo">
+              <div class="post">
                   <div class="post-barra-sup">
                     <a href="#"><img src="imgs/barked.jpg" class="post-logo-pag"></a>
                     <a href="#"><p>Barked</p></a>
+                    <a href="#"><ion-icon name="ellipsis-horizontal" class="icons"></ion-icon></a>
                   </div>
                   <img src="imgs/barked-post.jpg">
                   <div class="post-barra-inf">
@@ -114,14 +119,38 @@
                     </div>
                   </div>
               </div>
+              <div class="post ultimo"> <!-- a class ultimo é usada para retirar a margin-bottom do ultimo post -->
+                <div class="post-barra-sup">
+                  <a href="#"><img src="imgs/no-photo.jpg" class="post-logo-pag"></a>
+                  <a href="#"><p>hugo_kelven</p></a>
+                  <a href="#"><ion-icon name="ellipsis-horizontal" class="icons"></ion-icon></a>
+                </div>
+                <video controls muted autoplay loop> <!-- adiciona um arquivo de vídeo -->
+                  <source src="videos/video.mp4" type="video/mp4" />
+                  <source src="videos/video.ogg" type="video/ogg" />
+                  Seu navegador não suporta vídeos.
+                </video>
+                <div class="post-barra-inf">
+                  <div>
+                    <a href="#"><img src="icons/heart.svg" class="icons"></a>
+                    <a href="#"><img src="icons/chatbubble.svg" class="icons"></a>
+                    <a href="#"><img src="icons/paper-plane.svg" class="icons"></a>
+                    <a href="#"><img src="icons/bookmark.svg" class="icons"></a>
+                  </div>
+                  <div class="curtidas">
+                    <a href="#"><img src="imgs/no-photo.jpg" class="logo-pag-like"></a>
+                    <p>Curtido por <a href="#">fulano</a> e <a href="#">outras 999.999 pessoas</a></p>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
-        <div class="barra-lateral">
+        <div class="barra-lateral"> <!-- área da página que fica a direita do feed -->
           <div class="barra-lateral-sup">
             <a href="#"><img src="imgs/catana.jpg"></a>
-            <div class="pag-em-destaque">
+            <div class="pag-usuario">
               <a href="#"><p>catanacomics</p></a>
-              <a href="#"><p>Catana</p></a>
+              <p>Catana</p>
             </div>
             <div class="sugestoes">
               <a href="#"><p>Ver tudo</p></a>
@@ -132,31 +161,31 @@
             <div class="pag-sugerida">
               <a href="#"><img src="imgs/badvibememes.jpg"></a>
               <a href="#"><p>Seguir</p></a>
-              <a href="#"><p>bad.vibes.memes</p></a>
+              <a href="#" class="underline"><p>bad.vibes.memes</p></a>
               <p>Segue você</p>
             </div>
             <div class="pag-sugerida">
               <a href="#"><img src="imgs/chibidart.jpg"></a>
               <a href="#"><p>Seguir</p></a>
-              <a href="#"><p>chibirdart</p></a>
+              <a href="#" class="underline"><p>chibirdart</p></a>
               <p>Segue você</p>
             </div>
             <div class="pag-sugerida">
               <a href="#"><img src="imgs/razoesparaacreditar.jpg"></a>
               <a href="#"><p>Seguir</p></a>
-              <a href="#"><p>razoesparaacreditar</p></a>
+              <a href="#" class="underline"><p>razoesparaacreditar</p></a>
               <p>Novo no Instagram</p>
             </div>
             <div class="pag-sugerida">
               <a href="#"><img src="imgs/adorableanimals.jpg"></a>
               <a href="#"><p>Seguir</p></a>
-              <a href="#"><p>adorable_animals</p></a>
+              <a href="#" class="underline"><p>adorable_animals</p></a>
               <p>Segue você</p>
             </div>
             <div class="pag-sugerida">
               <a href="#"><img src="imgs/smallcutecats.jpg"></a>
               <a href="#"><p>Seguir</p></a>
-              <a href="#"><p>smallcutecats</p></a>
+              <a href="#" class="underline"><p>smallcutecats</p></a>
               <p>Segue você</p>
             </div>
           </div>
@@ -168,7 +197,7 @@
           </div>
         </div>
       </div>
-      <div class="barra-inferior">
+      <div class="barra-inferior"> <!-- só é exibida para larguras de tela menores que 614px -->
         <a href="#"><ion-icon name="home"></ion-icon></a>
         <a href="#"><ion-icon name="search-outline"></ion-icon></a>
         <a href="#"><ion-icon name="add-circle-outline"></ion-icon></a>
@@ -176,7 +205,7 @@
         <a href="#"><ion-icon name="person-outline"></ion-icon></a>
       </div>
 
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!-- permite adicionar ícones de maneira mais fácil. Mais informações em: https://ionic.io/ionicons -->
 
   </body>
 </html>
